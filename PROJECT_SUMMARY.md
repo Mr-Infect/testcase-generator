@@ -3,6 +3,7 @@
 ## Overview
 
 A complete, production-ready web-based Agentic Software Testing Platform with:
+
 - ✅ Zero Docker dependency - runs natively
 - ✅ Full Ollama LLM integration for AI features
 - ✅ Autonomous testing agents with real-time monitoring
@@ -12,6 +13,7 @@ A complete, production-ready web-based Agentic Software Testing Platform with:
 ## What's Included
 
 ### Frontend Pages
+
 1. **Landing Page** (`/`)
    - Platform introduction
    - Key differentiators
@@ -66,6 +68,7 @@ A complete, production-ready web-based Agentic Software Testing Platform with:
 ### API Routes
 
 #### Ollama Integration Routes
+
 - `POST /api/ollama/generate-tests` - AI test generation
 - `POST /api/ollama/analyze-anomaly` - Defect analysis
 - `POST /api/ollama/generate-report` - Report generation
@@ -73,11 +76,13 @@ A complete, production-ready web-based Agentic Software Testing Platform with:
 - `GET /api/ollama/models` - Available models list
 
 ### Components
+
 - `OllamaStatusBadge` - Real-time connection indicator
 - Comprehensive shadcn/ui component library
 - Recharts integration for analytics
 
 ### Libraries & Client Utilities
+
 - `lib/ollama-client.ts` - Complete Ollama API client with:
   - Configuration management
   - Text generation
@@ -85,6 +90,7 @@ A complete, production-ready web-based Agentic Software Testing Platform with:
   - Model listing
 
 ### Documentation
+
 - `OLLAMA_SETUP.md` - Complete Ollama setup guide
 - `README.md` - Project documentation
 - `.env.example` - Environment template
@@ -92,6 +98,7 @@ A complete, production-ready web-based Agentic Software Testing Platform with:
 ## Key Features
 
 ### AI-Powered Features (via Ollama)
+
 1. **Test Case Generation**
    - Automatically generates comprehensive test scenarios
    - Based on app description and test type
@@ -113,6 +120,7 @@ A complete, production-ready web-based Agentic Software Testing Platform with:
    - Health diagnostics
 
 ### Testing Platform Features
+
 1. **Autonomous Agents**
    - Exploration agent
    - Anomaly detection agent
@@ -136,6 +144,7 @@ A complete, production-ready web-based Agentic Software Testing Platform with:
 ## Technology Stack
 
 ### Frontend
+
 - **Framework**: Next.js 16 (App Router)
 - **UI Library**: React 19.2
 - **Language**: TypeScript
@@ -145,11 +154,13 @@ A complete, production-ready web-based Agentic Software Testing Platform with:
 - **Icons**: Lucide React
 
 ### Backend
+
 - **API Routes**: Next.js Route Handlers
 - **LLM Integration**: Ollama (local)
 - **No External APIs**: All AI features local
 
 ### Deployment
+
 - **Runtime**: Node.js (native)
 - **No Docker**: Direct execution
 - **Environment**: Development or Production
@@ -157,37 +168,48 @@ A complete, production-ready web-based Agentic Software Testing Platform with:
 ## Installation & Setup
 
 ### Prerequisites
+
 - Node.js 18+
 - npm/yarn
 - Ollama installed
 
 ### Quick Start
+
 \`\`\`bash
+
 # 1. Install dependencies
+
 npm install
 
 # 2. Start Ollama (in another terminal)
+
 ollama serve
 
 # 3. Pull a model
+
 ollama pull mistral
 
 # 4. Start dev server
+
 npm run dev
 
 # 5. Open browser
+
 # http://localhost:3000
+
 \`\`\`
 
 ## Configuration
 
 ### Ollama Setup
+
 1. Download from https://ollama.ai
 2. Install and run: `ollama serve`
 3. Download a model: `ollama pull mistral`
 4. Configure in Settings → Ollama AI
 
 ### Optional Environment Variables
+
 \`\`\`env
 NEXT_PUBLIC_OLLAMA_URL=http://localhost:11434
 NEXT_PUBLIC_OLLAMA_MODEL=mistral
@@ -198,40 +220,40 @@ NEXT_PUBLIC_OLLAMA_MODEL=mistral
 \`\`\`
 agentic-testing-platform/
 ├── app/
-│   ├── page.tsx                 # Landing page
-│   ├── layout.tsx               # Root layout
-│   ├── globals.css              # Theme & styles
-│   ├── dashboard/               # Dashboard section
-│   │   ├── page.tsx
-│   │   ├── layout.tsx
-│   │   ├── agent/page.tsx
-│   │   ├── configure/page.tsx
-│   │   ├── projects/
-│   │   │   ├── page.tsx
-│   │   │   └── [id]/page.tsx
-│   │   ├── results/page.tsx
-│   │   ├── knowledge/page.tsx
-│   │   ├── settings/page.tsx
-│   │   └── knowledge/loading.tsx
-│   ├── api/
-│   │   └── ollama/              # Ollama routes
-│   │       ├── generate-tests.ts
-│   │       ├── analyze-anomaly.ts
-│   │       ├── generate-report.ts
-│   │       ├── health.ts
-│   │       └── models.ts
-│   └── docs/page.tsx            # Setup guide
+│ ├── page.tsx # Landing page
+│ ├── layout.tsx # Root layout
+│ ├── globals.css # Theme & styles
+│ ├── dashboard/ # Dashboard section
+│ │ ├── page.tsx
+│ │ ├── layout.tsx
+│ │ ├── agent/page.tsx
+│ │ ├── configure/page.tsx
+│ │ ├── projects/
+│ │ │ ├── page.tsx
+│ │ │ └── [id]/page.tsx
+│ │ ├── results/page.tsx
+│ │ ├── knowledge/page.tsx
+│ │ ├── settings/page.tsx
+│ │ └── knowledge/loading.tsx
+│ ├── api/
+│ │ └── ollama/ # Ollama routes
+│ │ ├── generate-tests.ts
+│ │ ├── analyze-anomaly.ts
+│ │ ├── generate-report.ts
+│ │ ├── health.ts
+│ │ └── models.ts
+│ └── docs/page.tsx # Setup guide
 ├── lib/
-│   ├── ollama-client.ts         # Ollama client
-│   └── utils.ts                 # Utilities
+│ ├── ollama-client.ts # Ollama client
+│ └── utils.ts # Utilities
 ├── components/
-│   ├── ollama-status-badge.tsx
-│   └── ui/                      # shadcn components
-├── public/                      # Static assets
-├── OLLAMA_SETUP.md              # Setup guide
-├── README.md                    # Documentation
-├── PROJECT_SUMMARY.md           # This file
-├── .env.example                 # Environment template
+│ ├── ollama-status-badge.tsx
+│ └── ui/ # shadcn components
+├── public/ # Static assets
+├── OLLAMA_SETUP.md # Setup guide
+├── README.md # Documentation
+├── PROJECT_SUMMARY.md # This file
+├── .env.example # Environment template
 ├── package.json
 ├── tsconfig.json
 ├── next.config.mjs
@@ -240,26 +262,26 @@ agentic-testing-platform/
 
 ## Features by Page
 
-| Page | Main Features | AI Integration |
-|------|---------------|-----------------|
-| Dashboard | Metrics, charts, status | - |
-| Projects | CRUD operations | - |
-| Configure | Environment setup, credentials | Test generation |
-| Agent Control | Agent monitoring, workflows | Anomaly analysis |
-| Results | Defect listing, analytics | Report generation |
-| Knowledge Base | Behaviors, patterns, recommendations | - |
-| Settings | General, security, notifications | **Ollama config** |
+| Page           | Main Features                        | AI Integration    |
+| -------------- | ------------------------------------ | ----------------- |
+| Dashboard      | Metrics, charts, status              | -                 |
+| Projects       | CRUD operations                      | -                 |
+| Configure      | Environment setup, credentials       | Test generation   |
+| Agent Control  | Agent monitoring, workflows          | Anomaly analysis  |
+| Results        | Defect listing, analytics            | Report generation |
+| Knowledge Base | Behaviors, patterns, recommendations | -                 |
+| Settings       | General, security, notifications     | **Ollama config** |
 
 ## API Endpoints
 
 All endpoints are local, no external API calls:
 
 \`\`\`
-GET  /api/ollama/health            → Check Ollama status
-GET  /api/ollama/models            → List available models
-POST /api/ollama/generate-tests    → Generate test cases
-POST /api/ollama/analyze-anomaly   → Analyze defects
-POST /api/ollama/generate-report   → Generate reports
+GET /api/ollama/health → Check Ollama status
+GET /api/ollama/models → List available models
+POST /api/ollama/generate-tests → Generate test cases
+POST /api/ollama/analyze-anomaly → Analyze defects
+POST /api/ollama/generate-report → Generate reports
 \`\`\`
 
 ## Development Workflow
@@ -280,20 +302,28 @@ POST /api/ollama/generate-report   → Generate reports
 ## Deployment
 
 ### Vercel (Recommended)
+
 \`\`\`bash
 npm run build
 npm start
+
 # Or push to GitHub and connect to Vercel
+
 \`\`\`
 
 ### Self-Hosted
+
 \`\`\`bash
 npm run build
+
 # Copy build artifacts
+
 # Run: npm start
+
 \`\`\`
 
 ### Docker Alternative
+
 While built without Docker, can be containerized if needed.
 
 ## Security Notes
@@ -318,6 +348,7 @@ While built without Docker, can be containerized if needed.
 ## Support & Troubleshooting
 
 See `/docs` page or `OLLAMA_SETUP.md` for:
+
 - Installation issues
 - Ollama connection problems
 - Model download help
@@ -340,5 +371,5 @@ MIT - Open source project
 **Status**: ✅ Production Ready
 **Docker**: ❌ Not required (native execution)
 **Ollama**: ✅ Fully integrated
-**External APIs**: ❌ None required
+**External APIs**: ❌ None required but local model is neccessary
 **Local Only**: ✅ Complete privacy

@@ -29,48 +29,52 @@ An AI-driven autonomous testing platform that leverages local LLMs (Ollama) for 
 ## Quick Start
 
 ### 1. Install Dependencies
+
 \`\`\`bash
 npm install
 \`\`\`
 
 ### 2. Start Ollama Service
+
 \`\`\`bash
 ollama serve
 \`\`\`
 
 ### 3. Start Development Server
+
 \`\`\`bash
 npm run dev
 \`\`\`
 
 ### 4. Open in Browser
+
 Visit `http://localhost:3000`
 
 ## Project Structure
 
 \`\`\`
 app/
-├── page.tsx                    # Landing page
+├── page.tsx # Landing page
 ├── dashboard/
-│   ├── page.tsx               # Main dashboard
-│   ├── agent/                 # Agent control panel
-│   ├── configure/             # Test configuration
-│   ├── projects/              # Project management
-│   ├── results/               # Test results & reports
-│   ├── knowledge/             # Knowledge base
-│   └── settings/              # Settings (Ollama config)
+│ ├── page.tsx # Main dashboard
+│ ├── agent/ # Agent control panel
+│ ├── configure/ # Test configuration
+│ ├── projects/ # Project management
+│ ├── results/ # Test results & reports
+│ ├── knowledge/ # Knowledge base
+│ └── settings/ # Settings (Ollama config)
 ├── api/
-│   └── ollama/                # Ollama integration routes
+│ └── ollama/ # Ollama integration routes
 ├── docs/
-│   └── page.tsx               # Getting started guide
-└── globals.css                # Theme & styles
+│ └── page.tsx # Getting started guide
+└── globals.css # Theme & styles
 
 lib/
-├── ollama-client.ts           # Ollama API client
+├── ollama-client.ts # Ollama API client
 
 components/
-├── ollama-status-badge.tsx    # Connection status indicator
-└── ui/                        # shadcn components
+├── ollama-status-badge.tsx # Connection status indicator
+└── ui/ # shadcn components
 \`\`\`
 
 ## Ollama Integration
@@ -81,7 +85,7 @@ The platform integrates with locally running Ollama for:
 - **Anomaly Analysis**: Analyzes detected defects and suggests fixes
 - **Report Generation**: Creates professional QA reports
 
-All AI features work offline with no external API dependencies.
+All AI features work offline with no external API dependencies.but required to install the neccessary model locally
 
 ### Using Ollama Features
 
@@ -92,27 +96,27 @@ All AI features work offline with no external API dependencies.
 
 ## Key Pages
 
-| Page | Path | Description |
-|------|------|-------------|
-| Landing | `/` | Platform overview |
-| Dashboard | `/dashboard` | Real-time metrics |
-| Projects | `/dashboard/projects` | Manage test projects |
-| Agent Control | `/dashboard/agent` | Monitor AI agents |
-| Configure | `/dashboard/configure` | Setup testing environment |
-| Results | `/dashboard/results` | Test results & defects |
-| Knowledge Base | `/dashboard/knowledge` | Learned behaviors |
-| Settings | `/dashboard/settings` | Ollama configuration |
-| Docs | `/docs` | Setup guide |
+| Page           | Path                   | Description               |
+| -------------- | ---------------------- | ------------------------- |
+| Landing        | `/`                    | Platform overview         |
+| Dashboard      | `/dashboard`           | Real-time metrics         |
+| Projects       | `/dashboard/projects`  | Manage test projects      |
+| Agent Control  | `/dashboard/agent`     | Monitor AI agents         |
+| Configure      | `/dashboard/configure` | Setup testing environment |
+| Results        | `/dashboard/results`   | Test results & defects    |
+| Knowledge Base | `/dashboard/knowledge` | Learned behaviors         |
+| Settings       | `/dashboard/settings`  | Ollama configuration      |
+| Docs           | `/docs`                | Setup guide               |
 
 ## API Routes
 
-| Route | Method | Purpose |
-|-------|--------|---------|
-| `/api/ollama/health` | GET | Check Ollama connection |
-| `/api/ollama/models` | GET | List available models |
-| `/api/ollama/generate-tests` | POST | Generate test cases |
-| `/api/ollama/analyze-anomaly` | POST | Analyze defects |
-| `/api/ollama/generate-report` | POST | Generate QA report |
+| Route                         | Method | Purpose                 |
+| ----------------------------- | ------ | ----------------------- |
+| `/api/ollama/health`          | GET    | Check Ollama connection |
+| `/api/ollama/models`          | GET    | List available models   |
+| `/api/ollama/generate-tests`  | POST   | Generate test cases     |
+| `/api/ollama/analyze-anomaly` | POST   | Analyze defects         |
+| `/api/ollama/generate-report` | POST   | Generate QA report      |
 
 ## Configuration
 
@@ -131,16 +135,19 @@ See [OLLAMA_SETUP.md](./OLLAMA_SETUP.md) for detailed instructions.
 ## Development
 
 ### Build
+
 \`\`\`bash
 npm run build
 \`\`\`
 
 ### Production
+
 \`\`\`bash
 npm start
 \`\`\`
 
 ### Type Check
+
 \`\`\`bash
 npm run type-check
 \`\`\`
@@ -155,16 +162,19 @@ npm run type-check
 ## Troubleshooting
 
 ### Ollama Connection Failed
+
 - Verify `ollama serve` is running
 - Check localhost:11434 is accessible
 - Restart both services
 
 ### AI Features Not Working
+
 - Ensure model is downloaded (`ollama pull mistral`)
 - Check Settings → Ollama AI for status
 - Review browser console for errors
 
 ### Slow Performance
+
 - Increase available system RAM
 - Close other applications
 - GPU acceleration recommended
@@ -195,6 +205,7 @@ MIT
 ## Support
 
 For issues or questions:
+
 1. Check [OLLAMA_SETUP.md](./OLLAMA_SETUP.md)
 2. Visit `/docs` for setup guide
 3. Check Settings → Ollama AI for connection status
