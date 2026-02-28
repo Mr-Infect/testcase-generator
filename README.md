@@ -170,7 +170,7 @@ npm run type-check
 ### AI Features Not Working
 
 - Ensure model is downloaded (`ollama pull mistral`)
-- Check Settings → Ollama AI for status
+- Check Settings → Ollama AI for status also check for the offline functionality
 - Review browser console for errors
 
 ### Slow Performance
