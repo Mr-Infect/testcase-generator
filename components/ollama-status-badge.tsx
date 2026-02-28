@@ -44,3 +44,4 @@ export function OllamaStatusBadge() {
     </div>
   )
 }
+// ollama working status in the web browser 

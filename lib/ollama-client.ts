@@ -1,6 +1,6 @@
 // Ollama API client for local LLM interactions
 // Communicates with locally running Ollama instance (default: http://localhost:11434)
-
+// the local models works mistral in the clients system 
 interface OllamaConfig {
   baseUrl: string
   model: string
